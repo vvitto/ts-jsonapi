@@ -55,7 +55,7 @@ export class DeserializerUtils {
 
 
     if (included) {
-      return _.extend(this.extractAttributes(included), this.extractRelationships(included));
+      return _.extend(this.extractAttributes(included), this.extractRelationships(included),  this.extractMeta(included));
     } else {
       return null;
     }

@@ -252,7 +252,11 @@ describe('JSON API Deserializer', function () {
           attributes: {
             'address-line1': '406 Madison Court',
             'zip-code': '49426',
-            country: 'USA'
+            country: 'USA',
+          },
+          meta: {
+            metaFieldOne: 1,
+            metaFieldTwo: 1,
           }
         }, {
           type: 'addresses',
@@ -261,6 +265,10 @@ describe('JSON API Deserializer', function () {
             'address-line1': '361 Shady Lane',
             'zip-code': '23185',
             country: 'USA'
+          },
+          meta: {
+            metaFieldOne: 2,
+            metaFieldTwo: 2,
           }
         }],
         meta: {
@@ -279,7 +287,11 @@ describe('JSON API Deserializer', function () {
         id: '54735722e16620ba1eee36af',
         'address-line1': '406 Madison Court',
         'zip-code': '49426',
-        country: 'USA'
+        country: 'USA',
+        meta: {
+          'meta-field-one': 1,
+          'meta-field-two': 1,
+        }
       });
 
       expect(json[1]).to.have.key('id', 'first-name', 'last-name',
@@ -289,7 +301,11 @@ describe('JSON API Deserializer', function () {
         id: '54735697e16624ba1eee36bf',
         'address-line1': '361 Shady Lane',
         'zip-code': '23185',
-        country: 'USA'
+        country: 'USA',
+        meta: {
+          'meta-field-one': 2,
+          'meta-field-two': 2,
+        }
       });
 
       expect(meta).to.be.eql({
