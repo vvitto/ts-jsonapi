@@ -1,6 +1,6 @@
 {
-  "name": "ts-jsonapi",
-  "version": "2.1.3",
+  "name": "@vvitto/ts-jsonapi",
+  "version": "3.0.0",
   "description": "JSON API (De) Serializer in Typescript",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohuk/ts-jsonapi.git"
+    "url": "git+https://github.com/vvitto/ts-jsonapi.git"
   },
   "keywords": [
     "typescript",
     "jsonapi"
   ],
-  "author": "Mohammad Umair Khan <mohammad.umair.k@gmail.com>",
+  "author": "vvitto (vvitto123@gmail.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mohuk/ts-jsonapi/issues"
