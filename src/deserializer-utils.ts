@@ -2,6 +2,7 @@ import * as _ from 'lodash';
 import { Inflector } from './inflector';
 
 export class DeserializerUtils {
+  meta: any;
 
   constructor(
     public jsonapi: any,
@@ -130,7 +131,25 @@ export class DeserializerUtils {
     return valueForRelationship;
   }
 
+  public static caserize(object: any, opts: any) {
+    if(!object) return {};
+
+    return Object.keys(object).reduce<any>((accum, key) => {
+      const caserizedKey = Inflector.caserize(key, opts.keyForAttribute);
+      accum[caserizedKey] = object[key];
+      return accum;
+    }, {});
+  }
+
+  private extractMeta(from: any) {
+    if(!from.meta) return {};
+
+    return {
+      meta: DeserializerUtils.caserize(from.meta, this.opts)
+    }
+  }
+
   perform(): any {
-    return _.extend(this.extractAttributes(this.data), this.extractRelationships(this.data));
+    return _.extend(this.extractAttributes(this.data), this.extractRelationships(this.data), this.extractMeta(this.data));
   }
 }
