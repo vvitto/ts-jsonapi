@@ -4,3 +4,5 @@ Changes:
   2. Each resource object includes meta object 
   3. For meta object applied same letter casing options.
   4. Fixed tests
+
+### NPM - https://www.npmjs.com/package/@vvitto/ts-jsonapi
