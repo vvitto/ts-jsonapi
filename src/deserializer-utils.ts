@@ -8,9 +8,7 @@ export class DeserializerUtils {
     public jsonapi: any,
     public data: any,
     public opts: any
-  ){
-    this.meta = jsonapi.meta;
-  }
+  ){}
 
   private alreadyIncluded: any[] = [];
 
