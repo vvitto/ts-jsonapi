@@ -1,6 +1,6 @@
 {
   "name": "@vvitto/ts-jsonapi",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "JSON API (De) Serializer in Typescript",
   "main": "lib/index.js",
   "module": "lib/index.js",
